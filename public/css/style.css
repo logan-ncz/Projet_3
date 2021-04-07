@@ -4,7 +4,7 @@
 /* */
 body, html {
   margin: 0;
-  font-family: "robotoregular", Arial, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .header {
@@ -14,23 +14,101 @@ body, html {
   z-index: 1000;
 }
 .header__logo {
+  margin: 0;
   font-family: "Shrikhand", cursive;
   text-align: center;
 }
 
 .local {
+  display: flex;
+  justify-content: center;
   text-align: center;
   background: #EAEAEA;
+  font-size: 1.2rem;
   padding: 1.25rem 1rem;
+}
+.local__icon {
+  margin-right: 1rem;
+}
+.local__text {
+  font-weight: 700;
 }
 
 .hero {
+  padding: 2rem;
   text-align: center;
   background: #F6F6F6;
+}
+.hero__title {
+  margin: 0;
+}
+.hero__subtitle {
+  font-weight: 300;
+  margin: 1.5rem 0;
+}
+.hero__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 100px;
+  color: white;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.tuto {
+  padding: 2rem 1rem;
+}
+.tuto .container {
+  margin: auto;
+}
+.tuto__title {
+  margin-top: 0;
+}
+.tuto__icon {
+  color: #7e7e7e;
+  margin-right: 1rem;
+}
+.tuto__icon--purple {
+  color: #9356DC;
+}
+.tuto__steps {
+  padding: 0;
+  list-style: none;
+  counter-reset: counterSteps;
+}
+.tuto__step {
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  border-radius: 1.25rem;
+  margin: 1rem 0 1rem;
+  padding: 1.5rem;
+  background: #F6F6F6;
+  position: relative;
+  display: flex;
+}
+.tuto__step--step3 {
+  background: #F5EDFF;
+}
+.tuto__step::before {
+  counter-increment: counterSteps;
+  content: counter(counterSteps);
+  height: 1.5rem;
+  width: 1.5rem;
+  background: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 1rem;
+  position: absolute;
+  left: 1.5rem;
 }
 
 .restaurants {
   background: #F6F6F6;
+  padding: 2rem 1rem;
 }
 
 .footer {
