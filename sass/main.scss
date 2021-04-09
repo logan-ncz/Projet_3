@@ -16,6 +16,24 @@ $bg_footer : #353535;
     text-align: center;
 }
 
+@mixin btn {
+    border: 0;
+        padding: .75rem 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border-radius: 100px;
+        color: white;
+        background-color: rgb(104, 104, 104);
+        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+        }
+}
+
 /* */
 
 body, html {
@@ -68,15 +86,7 @@ body, html {
     }
 
     &__btn {
-        border: 0;
-        padding: .75rem 1.5rem;
-        font-size: 1.1rem;
-        font-weight: 500;
-        border-radius: 100px;
-        color: white;
-        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
-        cursor: pointer;
+        @include btn;
     }
 }
 
@@ -94,8 +104,10 @@ body, html {
     &__icon {
         color: #7e7e7e;
         margin-right: 1rem;
+        display: flex;
+        align-items: center;
 
-        &--purple {
+        &--purple:hover {
             color: $couleur_primaire;
         }
     }
@@ -115,7 +127,7 @@ body, html {
         position: relative;
         display: flex;
 
-        &--step3 {
+        &--step3:hover {
             background: #F5EDFF;
         }
 
@@ -131,7 +143,8 @@ body, html {
             color: white;
             border-radius: 1rem;
             position: absolute;
-            left: 1.5rem;
+            left: -10px;
+            top: 1.4rem;
         }
     }
 
@@ -146,14 +159,25 @@ body, html {
     }
 
     .card {
-        position: relative;
-        border-radius: 1rem;
-        background: white;
         color: inherit;
         text-decoration: none;
 
+        &__article {
+            position: relative;
+            border-radius: 1rem;
+            background: white;
+            margin-bottom: 1rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,.125);
+        }
+
         .card__badge {
             position: absolute;
+            top: 1rem;
+            right: 0.75rem;
+            background: $couleur_tertiaire;
+            padding: 0.5rem;
+            border-radius: 0.125rem;
+            color: #008766;
         }
 
         .card__img {
@@ -165,9 +189,9 @@ body, html {
 
         &__footer {
             display: flex;
-            align-items: center;
+            list-style: none;
+            margin: 0;
             padding: 1rem;
-            position: relative;
 
             .card__title {
                 margin: 0 0 0.25rem;
@@ -185,7 +209,6 @@ body, html {
         &__btn {
             font-size: 2em;
             display: flex;
-            justify-content: center;
             align-items: center;
         }
     }
@@ -194,13 +217,32 @@ body, html {
 .footer {
     background: $bg_footer;
 
+    .container {
+        padding: 1rem;
+    }
+
     &__logo {
     font-family: 'Shrikhand', cursive;
     color: white;
     }
 
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &Elt {
+            margin: 0.5rem 0;
+        }
+    }
+
     &__link {
         color: white;
         text-decoration: none;
+    }
+
+    &__icon {
+        width: 1.2rem;
+        margin-right: 0.5rem;
     }
 }
