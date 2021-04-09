@@ -1,0 +1,45 @@
+.header {
+    padding: 1rem 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1000;
+
+    &__logo {
+        margin: 0;
+        font-family: 'Shrikhand', cursive;
+        @include text;
+    }
+}
+
+.footer {
+    background: $bg_footer;
+
+    .container {
+        padding: 1rem;
+    }
+
+    &__logo {
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &Elt {
+            margin: 0.5rem 0;
+        }
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__icon {
+        width: 1.2rem;
+        margin-right: 0.5rem;
+    }
+}
