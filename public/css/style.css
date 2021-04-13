@@ -178,7 +178,68 @@ body, html {
 .menu {
   margin-top: -4rem;
   background: #EAEAEA;
+  border-radius: 2rem 2rem 0 0;
+  position: relative;
 }
+.menu__header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  font-family: Shrikhand, "cursive";
+}
+.menu__btn {
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0 solid transparent;
+  padding: 0;
+}
+
+.menuItem {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.menuItem__title {
+  margin: 0;
+}
+.menuItem__description {
+  margin: 0;
+}
+.menuItem__price {
+  display: flex;
+  align-items: flex-end;
+}
+
+.submenu {
+  padding: 0 1rem;
+}
+.submenu__title {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+.submenu__title::after {
+  position: absolute;
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background: #99E2D0;
+  bottom: 0;
+  left: 0;
+}
+
 .header {
   padding: 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);

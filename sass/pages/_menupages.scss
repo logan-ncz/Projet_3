@@ -24,8 +24,72 @@
 .menu {
     margin-top: -4rem;
     background: $bg_local;
+    border-radius: 2rem 2rem 0 0;
+    position: relative;
 
     &__header {
-        
+        padding: 1rem 2rem 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
+
+    &__title {
+      font-family: Shrikhand, "cursive";
+    }
+
+    &__btn {
+      height: 2rem;
+      width: 2rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0 solid transparent;
+      padding: 0;
+    }
+}
+
+.menuItem {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.submenu {
+  padding: 0 1rem;
+
+  &__title {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 3rem;
+      height: 0.25rem;
+      background: $couleur_tertiaire;
+      bottom: 0;
+      left: 0;
+    }
+  }
 }
