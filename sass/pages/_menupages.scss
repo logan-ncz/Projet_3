@@ -23,7 +23,7 @@
 
 .menu {
     margin-top: -4rem;
-    background: $bg_local;
+    background: $bg_second;
     border-radius: 2rem 2rem 0 0;
     position: relative;
 
@@ -47,6 +47,7 @@
       justify-content: center;
       border: 0 solid transparent;
       padding: 0;
+      background: $bg_second;
     }
 }
 
@@ -58,6 +59,12 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  @include box-shadow;
+
+  &__header {
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
   &__title {
     margin: 0;
@@ -65,11 +72,14 @@
 
   &__description {
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__price {
     display: flex;
     align-items: flex-end;
+    padding-left: 0.5rem;
   }
 }
 
@@ -81,15 +91,27 @@
     position: relative;
     font-weight: 400;
     padding-bottom: 0.5rem;
+    font-size: 1rem;
 
     &::after {
       position: absolute;
       content: "";
-      width: 3rem;
-      height: 0.25rem;
+      width: 2.5rem;
+      height: 0.15rem;
       background: $couleur_tertiaire;
       bottom: 0;
       left: 0;
     }
   }
+}
+
+.wrapBtn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.commandBtn {
+  @include btn;
 }

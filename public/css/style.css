@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /* Variables */
 /* Mixins */
 body, html {
@@ -177,7 +177,7 @@ body, html {
 
 .menu {
   margin-top: -4rem;
-  background: #EAEAEA;
+  background: #F6F6F6;
   border-radius: 2rem 2rem 0 0;
   position: relative;
 }
@@ -199,6 +199,7 @@ body, html {
   justify-content: center;
   border: 0 solid transparent;
   padding: 0;
+  background: #F6F6F6;
 }
 
 .menuItem {
@@ -209,16 +210,24 @@ body, html {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+}
+.menuItem__header {
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menuItem__title {
   margin: 0;
 }
 .menuItem__description {
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menuItem__price {
   display: flex;
   align-items: flex-end;
+  padding-left: 0.5rem;
 }
 
 .submenu {
@@ -229,15 +238,40 @@ body, html {
   position: relative;
   font-weight: 400;
   padding-bottom: 0.5rem;
+  font-size: 1rem;
 }
 .submenu__title::after {
   position: absolute;
   content: "";
-  width: 3rem;
-  height: 0.25rem;
+  width: 2.5rem;
+  height: 0.15rem;
   background: #99E2D0;
   bottom: 0;
   left: 0;
+}
+
+.wrapBtn {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.commandBtn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.commandBtn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 .header {

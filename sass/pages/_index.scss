@@ -63,7 +63,7 @@
     }
 
     &__step {
-        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,.125);
+        @include box-shadow;
         border-radius: 1.25rem;
         margin: 1rem 0 1rem;
         padding: 1.5rem;
@@ -111,7 +111,7 @@
             border-radius: 1rem;
             background: white;
             margin-bottom: 1rem;
-            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,.125);
+            @include box-shadow;
         }
 
         .card__badge {
