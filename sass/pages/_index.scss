@@ -154,6 +154,11 @@
             font-size: 2em;
             display: flex;
             align-items: center;
+
+            &::before {
+                content: "";
+                background: linear-gradient(0deg,#9356dc,#ff79da);
+            }
         }
     }
 }

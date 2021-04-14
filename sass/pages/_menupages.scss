@@ -3,6 +3,10 @@
     max-height: 32rem;
     width: 100%;
     object-fit: cover;
+    
+    &--lanoteenchantee {
+      max-height: $max-height--lanoteenchantee;
+    }
   }
 
 .header {
