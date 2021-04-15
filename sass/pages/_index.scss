@@ -51,9 +51,9 @@
         display: flex;
         align-items: center;
 
-        &--purple:hover {
-            color: $couleur_primaire;
-        }
+        // &--purple:hover {
+        //     color: $couleur_primaire;
+        // }
     }
 
     &__steps {
@@ -71,8 +71,11 @@
         position: relative;
         display: flex;
 
-        &--step3:hover {
+        &:hover {
             background: #F5EDFF;
+        }
+        &:hover i {
+            color: $couleur_primaire;
         }
 
         &::before {

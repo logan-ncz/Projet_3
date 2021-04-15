@@ -65,9 +65,6 @@ body, html {
   display: flex;
   align-items: center;
 }
-.tuto__icon--purple:hover {
-  color: #9356DC;
-}
 .tuto__steps {
   padding: 0;
   list-style: none;
@@ -82,8 +79,11 @@ body, html {
   position: relative;
   display: flex;
 }
-.tuto__step--step3:hover {
+.tuto__step:hover {
   background: #F5EDFF;
+}
+.tuto__step:hover i {
+  color: #9356DC;
 }
 .tuto__step::before {
   counter-increment: counterSteps;
