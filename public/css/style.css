@@ -270,6 +270,7 @@ body, html {
   display: flex;
   align-items: flex-end;
   padding-left: 0.5rem;
+  font-weight: 700;
 }
 .menuItem__confirmation {
   background: #99E2D0;
