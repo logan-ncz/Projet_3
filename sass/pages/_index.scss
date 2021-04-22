@@ -1,3 +1,28 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    z-index: 10000;
+    animation: loader 0.01s;
+    animation-delay: 1.75s;
+    animation-fill-mode: both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__itemContainer p {
+        font-family: "Shrikhand", cursive;
+        font-size: 2.5rem;
+        background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: filling 1s;
+    }
+}
+
 .local {
     display: flex;
     justify-content: center;
@@ -39,6 +64,7 @@
 
     .container {
         margin: auto;
+        position: relative;
     }
 
     &__title {
@@ -65,7 +91,7 @@
     &__step {
         @include box-shadow;
         border-radius: 1.25rem;
-        margin: 1rem 0 1rem;
+        margin: 1rem 0 1rem 0.75rem;
         padding: 1.5rem;
         background: $bg_second;
         position: relative;
