@@ -23,13 +23,18 @@
     }
 }
 
-.local {
-    display: flex;
-    justify-content: center;
+.local{
     @include text;
     background: $bg_local;
-    font-size: 1.2rem;
     padding: 1.25rem 1rem;
+
+    h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__icon {
         margin-right: 1rem;
@@ -71,7 +76,7 @@
         margin-top: 0;
     }
 
-    &__icon {
+    &__icon.fas {
         color: #7e7e7e;
         margin-right: 1rem;
         display: flex;
