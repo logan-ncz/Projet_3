@@ -64,6 +64,12 @@
     }
 }
 
+.container {
+    margin: auto;
+    max-width: 1280px;
+    box-sizing: border-box;
+}
+
 .tuto {
     padding: 2rem 1rem;
 
@@ -136,7 +142,6 @@
         margin: auto;
     }
 }
-
 
 .card {
     color: inherit;

@@ -17,10 +17,12 @@
 }
 @keyframes itemAppear {
   0% {
-    transform: scale(0);
+    transform: scaleY(0);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(1);
+    opacity: 1;
   }
 }
 body, html {
@@ -99,6 +101,12 @@ body, html {
 .hero__btn:hover {
   background-color: white;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  margin: auto;
+  max-width: 1280px;
+  box-sizing: border-box;
 }
 
 .tuto {
@@ -309,7 +317,8 @@ body, html {
   animation: itemAppear 0.6s;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
   animation-fill-mode: both;
-  transform: scale(0);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
   max-width: 100%;
 }
 .menuItem__header {
@@ -355,7 +364,7 @@ body, html {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
   transition-duration: 0.5s;
 }
 .menuItem:hover .menuItem__wrapIcon {
@@ -452,6 +461,35 @@ body, html {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
+@media (min-width: 768px) {
+  .cards {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+  .cards > * {
+    flex: 0 0 auto;
+    width: 25%;
+    width: calc(50% - 30px);
+    margin-left: 30px;
+  }
+
+  .tuto__steps {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+
+  .tuto__step {
+    display: flex;
+    width: calc(33.33% - 90px);
+    margin-left: calc(30px + 0.75rem);
+  }
+}
 .header {
   padding: 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -490,7 +528,5 @@ body, html {
   width: 1.2rem;
   margin-right: 0.5rem;
 }
-
-/* */
 
 /*# sourceMappingURL=style.css.map */
