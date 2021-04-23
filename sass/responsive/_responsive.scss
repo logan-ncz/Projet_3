@@ -1,21 +1,6 @@
-// Le format tablette
+// Le format tablette bas de gamme
 
-@media (min-width: 768px) {
-    .cards {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: -30px;
-    
-        & > * {
-        flex: 0 0 auto;
-        width: 25%;
-        width: calc(50% - 30px);
-        margin-left: 30px;
-        }
-    }
-
+@media (min-width: 576px) and (max-width: 768px) {
     .tuto__steps {
         box-sizing: border-box;
         display: flex;
@@ -28,5 +13,138 @@
         display: flex;
         width: calc(33.33% - 90px);
         margin-left: calc(30px + 0.75rem);
+    }
+
+    .cards {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -30px;
+
+        & > * {
+        flex: 0 0 auto;
+        width: calc(50% - 30px);
+        margin-left: 30px;
+        }
+    }
+    
+    .heroImg {
+        max-height: 25rem;
+    }
+
+    .submenus {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .submenu {
+        flex: 0 0 auto;
+        width: 45%;
+    }
+}
+
+// Le format iPad portrait
+
+@media (min-width: 768px) and (max-width: 876px) {
+    .tuto__steps {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -30px;
+    }
+
+    .tuto__step {
+        display: flex;
+        width: calc(33.33% - 90px);
+        margin-left: calc(30px + 0.75rem);
+        
+        &::before {
+            top: 2rem;
+        }
+    }
+
+    .cards {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -30px;
+
+        & > * {
+        flex: 0 0 auto;
+        width: calc(50% - 30px);
+        margin-left: 30px;
+        }
+    }
+    
+    .heroImg {
+        max-height: 25rem;
+    }
+
+    .submenus {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .submenu {
+        flex: 0 0 auto;
+        width: 45%;
+    }
+}
+
+// Le format tablette/desktop en Paysage
+
+@media (min-width: 877px) {
+    .tuto__steps {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -30px;
+    }
+
+    .tuto__step {
+        display: flex;
+        width: calc(33.33% - 90px);
+        margin-left: calc(30px + 0.75rem);
+    }
+
+    .cards {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: -30px;
+
+        & > * {
+        flex: 0 0 auto;
+        width: calc(50% - 30px);
+        margin-left: 30px;
+        }
+    }
+
+    .heroImg {
+        max-height: 25rem;
+    }
+
+    .submenus {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .submenu {
+        flex: 0 0 auto;
+        width: 29%;
     }
 }
